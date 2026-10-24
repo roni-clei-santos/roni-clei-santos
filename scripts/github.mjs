@@ -10,7 +10,7 @@ const API = 'https://api.github.com';
 export async function fetchRepo(repo, { fetchImpl = fetch, token } = {}) {
   const headers = {
     Accept: 'application/vnd.github+json',
-    'User-Agent': 'roneclay-profile-build',
+    'User-Agent': 'roni-clei-santos-profile-build',
     'X-GitHub-Api-Version': '2022-11-28',
   };
   if (token) headers.Authorization = `Bearer ${token}`;

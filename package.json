@@ -1,5 +1,5 @@
 {
-  "name": "roneclay-profile",
+  "name": "roni-clei-santos-profile",
   "private": true,
   "type": "module",
   "description": "Generates the SVGs and README of the GitHub profile from profile.json. No dependencies.",

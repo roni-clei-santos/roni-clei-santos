@@ -1,5 +1,5 @@
 {
-  "github": "roneclay",
+  "github": "roni-clei-santos",
   "name": "Roni Clei Santos",
   "headline": "Senior Adobe Commerce / Magento Developer",
   "since": "Building on Magento since 2013 (Magento 1 and 2)",
@@ -52,11 +52,11 @@
   ],
   "featured": [
     {
-      "repo": "roneclay/ProductPaymentOptions",
+      "repo": "roni-clei-santos/ProductPaymentOptions",
       "fallbackDescription": "Magento 2 module that shows per-payment-method discounts and installment simulations on the product page."
     },
     {
-      "repo": "roneclay/m2-estimate-shipping-brazil",
+      "repo": "roni-clei-santos/m2-estimate-shipping-brazil",
       "fallbackDescription": "Magento 2 module that estimates all shipping methods on the product page from a Brazilian postcode (CEP)."
     }
   ],

@@ -7,8 +7,8 @@ import { THEMES } from '../scripts/theme.mjs';
 
 const profile = JSON.parse(await readFile(new URL('../profile.json', import.meta.url), 'utf8'));
 const repos = [
-  { name: 'ProductPaymentOptions', description: 'Discounts & installments per payment method.', language: 'PHP', url: 'https://github.com/roneclay/ProductPaymentOptions' },
-  { name: 'm2-estimate-shipping-brazil', description: 'Shipping estimate by CEP.', language: 'PHP', url: 'https://github.com/roneclay/m2-estimate-shipping-brazil' },
+  { name: 'ProductPaymentOptions', description: 'Discounts & installments per payment method.', language: 'PHP', url: 'https://github.com/roni-clei-santos/ProductPaymentOptions' },
+  { name: 'm2-estimate-shipping-brazil', description: 'Shipping estimate by CEP.', language: 'PHP', url: 'https://github.com/roni-clei-santos/m2-estimate-shipping-brazil' },
 ];
 
 /** Minimal well-formedness check without dependencies: balanced tags and no stray `&` or `<` in text. */

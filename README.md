@@ -15,7 +15,7 @@
   <img alt="Featured open-source modules" src="assets/featured.light.svg?v=2026-10-23" width="100%">
 </picture>
 
-[ProductPaymentOptions](https://github.com/roneclay/ProductPaymentOptions) · [m2-estimate-shipping-brazil](https://github.com/roneclay/m2-estimate-shipping-brazil)
+[ProductPaymentOptions](https://github.com/roni-clei-santos/ProductPaymentOptions) · [m2-estimate-shipping-brazil](https://github.com/roni-clei-santos/m2-estimate-shipping-brazil)
 
 ## Currently
 

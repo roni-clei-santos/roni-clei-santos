@@ -5,7 +5,7 @@ import { test } from 'node:test';
 import { decideVersion, IMAGES, renderReadme } from '../scripts/readme.mjs';
 
 const profile = JSON.parse(await readFile(new URL('../profile.json', import.meta.url), 'utf8'));
-const repos = [{ name: 'ProductPaymentOptions', url: 'https://github.com/roneclay/ProductPaymentOptions' }];
+const repos = [{ name: 'ProductPaymentOptions', url: 'https://github.com/roni-clei-santos/ProductPaymentOptions' }];
 const readme = renderReadme(profile, '2026-10-23', repos);
 
 test('the header image links to the certification verification page', () => {
