@@ -5,13 +5,17 @@
 <rect x="32" y="64" width="400" height="159" rx="8" fill="none" stroke="#30363d"/>
 <path transform="translate(52 84)" fill="#9198a1" d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/>
 <text x="76" y="97" font-family='ui-monospace, SFMono-Regular, Menlo, Consolas, monospace' font-size="15" font-weight="700" fill="#ff9a62">ProductPaymentOptions</text>
-<text x="52" y="128" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Magento 2 module that shows per-payment-method</text>
-<text x="52" y="147" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">discounts and installment simulations on the product</text>
-<text x="52" y="166" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">page.</text>
+<text x="52" y="128" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Magento 2 / Adobe Commerce module that shows</text>
+<text x="52" y="147" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">per-payment-method discounts and installment plans</text>
+<text x="52" y="166" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">(Tabela Price) on the product page.</text>
 <circle cx="57" cy="196.5" r="5" fill="#4F5D95"/>
 <text x="68" y="201" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13" font-weight="400" fill="#9198a1">PHP</text>
 <rect x="448" y="64" width="400" height="159" rx="8" fill="none" stroke="#30363d"/>
 <path transform="translate(468 84)" fill="#9198a1" d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/>
 <text x="492" y="97" font-family='ui-monospace, SFMono-Regular, Menlo, Consolas, monospace' font-size="15" font-weight="700" fill="#ff9a62">m2-estimate-shipping-brazil</text>
-<text x="468" y="128" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Simulates all Shipping methods on the product page.</text>
+<text x="468" y="128" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Magento 2 / Adobe Commerce module that estimates</text>
+<text x="468" y="147" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">every shipping method on the product page from a</text>
+<text x="468" y="166" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Brazilian postcode (CEP).</text>
+<circle cx="473" cy="196.5" r="5" fill="#4F5D95"/>
+<text x="484" y="201" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13" font-weight="400" fill="#9198a1">PHP</text>
 </svg>
