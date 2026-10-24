@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="275" viewBox="0 0 880 275" role="img" aria-label="Stack">
+<title>Stack</title>
+<rect x="0.5" y="0.5" width="879" height="274" rx="12" fill="#0d1117" stroke="#30363d"/>
+<text x="32" y="44" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="12" font-weight="700" fill="#9198a1" letter-spacing="1.5">STACK</text>
+<text x="32" y="82" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="15" font-weight="700" fill="#ff9a62">Adobe Commerce</text>
+<circle cx="35" cy="103.5" r="2" fill="#f26322"/>
+<text x="46" y="108" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Magento 2 / Adobe</text>
+<text x="46" y="127" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Commerce</text>
+<circle cx="35" cy="148.5" r="2" fill="#f26322"/>
+<text x="46" y="153" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Magento 1 (legacy)</text>
+<circle cx="35" cy="174.5" r="2" fill="#f26322"/>
+<text x="46" y="179" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Payment gateway</text>
+<text x="46" y="198" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">integrations</text>
+<circle cx="35" cy="219.5" r="2" fill="#f26322"/>
+<text x="46" y="224" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">ERP integrations</text>
+<circle cx="35" cy="245.5" r="2" fill="#f26322"/>
+<text x="46" y="250" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">GraphQL &amp; REST APIs</text>
+<line x1="231" y1="64" x2="231" y2="251" stroke="#21262d"/>
+<text x="241" y="82" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="15" font-weight="700" fill="#ff9a62">Frontend</text>
+<circle cx="244" cy="103.5" r="2" fill="#f26322"/>
+<text x="255" y="108" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Magento UI (LESS,</text>
+<text x="255" y="127" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Knockout.js, RequireJS)</text>
+<circle cx="244" cy="148.5" r="2" fill="#f26322"/>
+<text x="255" y="153" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">JavaScript</text>
+<circle cx="244" cy="174.5" r="2" fill="#f26322"/>
+<text x="255" y="179" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">React</text>
+<circle cx="244" cy="200.5" r="2" fill="#f26322"/>
+<text x="255" y="205" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Tailwind CSS</text>
+<circle cx="244" cy="226.5" r="2" fill="#f26322"/>
+<text x="255" y="231" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">PWA</text>
+<circle cx="244" cy="252.5" r="2" fill="#f26322"/>
+<text x="255" y="257" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">UI/web design</text>
+<line x1="440" y1="64" x2="440" y2="251" stroke="#21262d"/>
+<text x="450" y="82" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="15" font-weight="700" fill="#ff9a62">Backend &amp; Data</text>
+<circle cx="453" cy="103.5" r="2" fill="#f26322"/>
+<text x="464" y="108" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">PHP</text>
+<circle cx="453" cy="129.5" r="2" fill="#f26322"/>
+<text x="464" y="134" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">MySQL</text>
+<circle cx="453" cy="155.5" r="2" fill="#f26322"/>
+<text x="464" y="160" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">GraphQL</text>
+<circle cx="453" cy="181.5" r="2" fill="#f26322"/>
+<text x="464" y="186" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Salesforce Marketing</text>
+<text x="464" y="205" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Cloud (SSJS, CloudPages)</text>
+<line x1="649" y1="64" x2="649" y2="251" stroke="#21262d"/>
+<text x="659" y="82" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="15" font-weight="700" fill="#ff9a62">Cloud &amp; Delivery</text>
+<circle cx="662" cy="103.5" r="2" fill="#f26322"/>
+<text x="673" y="108" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">AWS</text>
+<circle cx="662" cy="129.5" r="2" fill="#f26322"/>
+<text x="673" y="134" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">Nginx</text>
+<circle cx="662" cy="155.5" r="2" fill="#f26322"/>
+<text x="673" y="160" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">CI/CD</text>
+<circle cx="662" cy="181.5" r="2" fill="#f26322"/>
+<text x="673" y="186" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#e6edf3">GitHub Actions</text>
+</svg>
