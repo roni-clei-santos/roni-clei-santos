@@ -1,0 +1,11 @@
+{
+  "name": "roneclay-profile",
+  "private": true,
+  "type": "module",
+  "description": "Generates the SVGs and README of the GitHub profile from profile.json. No dependencies.",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test"
+  }
+}

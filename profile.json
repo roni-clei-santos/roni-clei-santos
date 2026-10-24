@@ -1,0 +1,70 @@
+{
+  "github": "roneclay",
+  "name": "Roni Clei Santos",
+  "headline": "Senior Adobe Commerce / Magento Developer",
+  "since": "Building on Magento since 2013 (Magento 1 and 2)",
+  "location": "Florianópolis area, Brazil · Remote",
+  "certification": {
+    "name": "Adobe Certified Expert — Adobe Commerce Front End Developer",
+    "since": "2019",
+    "url": "https://certification.adobe.com/credential/verify/ea046f3a-497e-44b3-9aff-6b959ff56b65"
+  },
+  "columns": [
+    {
+      "title": "Adobe Commerce",
+      "items": [
+        "Magento 2 / Adobe Commerce",
+        "Magento 1 (legacy)",
+        "Payment gateway integrations",
+        "ERP integrations",
+        "GraphQL & REST APIs"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        "Magento UI (LESS, Knockout.js, RequireJS)",
+        "JavaScript",
+        "React",
+        "Tailwind CSS",
+        "PWA",
+        "UI/web design"
+      ]
+    },
+    {
+      "title": "Backend & Data",
+      "items": [
+        "PHP",
+        "MySQL",
+        "GraphQL",
+        "Salesforce Marketing Cloud (SSJS, CloudPages)"
+      ]
+    },
+    {
+      "title": "Cloud & Delivery",
+      "items": [
+        "AWS",
+        "Nginx",
+        "CI/CD",
+        "GitHub Actions"
+      ]
+    }
+  ],
+  "featured": [
+    {
+      "repo": "roneclay/ProductPaymentOptions",
+      "fallbackDescription": "Magento 2 module that shows per-payment-method discounts and installment simulations on the product page."
+    },
+    {
+      "repo": "roneclay/m2-estimate-shipping-brazil",
+      "fallbackDescription": "Magento 2 module that estimates all shipping methods on the product page from a Brazilian postcode (CEP)."
+    }
+  ],
+  "currently": [
+    "Maintaining open-source Magento 2 modules, modernized for Magento 2.4.7+ and PHP 8.2–8.3.",
+    "Open to remote Adobe Commerce / Magento roles."
+  ],
+  "links": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/roni-clei-santos" }
+  ]
+}
