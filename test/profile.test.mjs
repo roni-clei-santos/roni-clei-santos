@@ -31,8 +31,11 @@ test('the stack has the four expected columns, none of them empty', () => {
 });
 
 test('the featured modules are repositories of the profile owner', () => {
-  assert.equal(profile.featured.length, 2);
-  for (const { repo } of profile.featured) assert.match(repo, new RegExp(`^${profile.github}/[\\w.-]+$`));
+  assert.equal(profile.featured.length, 3);
+  for (const { repo, highlights } of profile.featured) {
+    assert.match(repo, new RegExp(`^${profile.github}/[\\w.-]+$`));
+    assert.deepEqual(highlights, ['100% coverage', 'PHPStan level 9']);
+  }
 });
 
 test('the stack only lists what is used in real work: no AWS', () => {
