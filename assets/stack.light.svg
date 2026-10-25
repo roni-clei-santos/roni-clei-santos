@@ -44,7 +44,7 @@
 <line x1="649" y1="64" x2="649" y2="251" stroke="#e6ebf1"/>
 <text x="659" y="82" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="15" font-weight="700" fill="#bc4a14">Cloud &amp; Delivery</text>
 <circle cx="662" cy="103.5" r="2" fill="#f26322"/>
-<text x="673" y="108" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#1f2328">AWS</text>
+<text x="673" y="108" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#1f2328">Docker</text>
 <circle cx="662" cy="129.5" r="2" fill="#f26322"/>
 <text x="673" y="134" font-family='-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif' font-size="13.5" font-weight="400" fill="#1f2328">Nginx</text>
 <circle cx="662" cy="155.5" r="2" fill="#f26322"/>
