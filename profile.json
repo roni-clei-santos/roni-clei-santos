@@ -43,21 +43,39 @@
     {
       "title": "Cloud & Delivery",
       "items": [
-        "AWS",
+        "Docker",
         "Nginx",
         "CI/CD",
         "GitHub Actions"
       ]
     }
   ],
+  "practices": [
+    "Coverage-gated unit tests (100% on my modules)",
+    "PHPStan level 9 and PHPCS Magento2, warnings block",
+    "PHPMD, copy-paste detection and ESLint in CI",
+    "End-to-end tests in a real browser before release",
+    "Git hooks that stop bad code before the push",
+    "AI code review against my own Magento guide",
+    "Service contracts, ViewModels, no ObjectManager",
+    "Semantic versioning, changelogs and release notes"
+  ],
   "featured": [
     {
       "repo": "roni-clei-santos/ProductPaymentOptions",
-      "fallbackDescription": "Magento 2 module that shows per-payment-method discounts and installment simulations on the product page."
+      "fallbackDescription": "Magento 2 module that shows per-payment-method discounts and installment simulations on the product page.",
+      "highlights": [
+        "100% coverage",
+        "PHPStan level 9"
+      ]
     },
     {
       "repo": "roni-clei-santos/m2-estimate-shipping-brazil",
-      "fallbackDescription": "Magento 2 module that estimates all shipping methods on the product page from a Brazilian postcode (CEP)."
+      "fallbackDescription": "Magento 2 module that estimates all shipping methods on the product page from a Brazilian postcode (CEP).",
+      "highlights": [
+        "100% coverage",
+        "PHPStan level 9"
+      ]
     }
   ],
   "currently": [
@@ -65,6 +83,9 @@
     "Open to remote Adobe Commerce / Magento roles."
   ],
   "links": [
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/roni-clei-santos" }
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/roni-clei-santos"
+    }
   ]
 }
