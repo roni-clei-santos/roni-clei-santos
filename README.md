@@ -28,6 +28,12 @@
   <img alt="m2-estimate-shipping-brazil: Magento 2 / Adobe Commerce module that estimates every shipping method on the product page from a Brazilian postcode (CEP)." src="assets/featured-m2-estimate-shipping-brazil.light.svg?v=2026-10-25" width="49%">
 </picture>
 </a>
+<a href="https://github.com/roni-clei-santos/Roni_CmsHreflang">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/featured-roni-cmshreflang.dark.svg?v=2026-10-25">
+  <img alt="Roni_CmsHreflang: Magento 2 module that adds hreflang and x-default tags to CMS pages across store views." src="assets/featured-roni-cmshreflang.light.svg?v=2026-10-25" width="49%">
+</picture>
+</a>
 </p>
 
 ## Currently
