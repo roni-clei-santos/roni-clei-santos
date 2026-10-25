@@ -34,3 +34,14 @@ test('the featured modules are repositories of the profile owner', () => {
   assert.equal(profile.featured.length, 2);
   for (const { repo } of profile.featured) assert.match(repo, new RegExp(`^${profile.github}/[\\w.-]+$`));
 });
+
+test('the stack only lists what is used in real work: no AWS', () => {
+  const items = profile.columns.flatMap((column) => column.items);
+  assert.ok(items.includes('Docker'));
+  assert.ok(!items.includes('AWS'));
+});
+
+test('the practices list is present and every featured module has highlights', () => {
+  assert.ok(profile.practices.length >= 6);
+  for (const featured of profile.featured) assert.ok(featured.highlights.length > 0, `${featured.repo} has no highlights`);
+});
