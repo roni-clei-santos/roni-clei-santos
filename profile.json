@@ -76,6 +76,14 @@
         "100% coverage",
         "PHPStan level 9"
       ]
+    },
+    {
+      "repo": "roni-clei-santos/Roni_CmsHreflang",
+      "fallbackDescription": "Magento 2 module that adds hreflang and x-default tags to CMS pages across store views.",
+      "highlights": [
+        "100% coverage",
+        "PHPStan level 9"
+      ]
     }
   ],
   "currently": [
