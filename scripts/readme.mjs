@@ -1,13 +1,19 @@
 import { escapeXml } from './text.mjs';
 
-export const IMAGES = ['header', 'stack', 'featured'];
+export const IMAGES = ['header', 'stack', 'practices'];
+
+/** Asset name of a featured repository card. */
+export function featuredImage(repo) {
+  return `featured-${repo.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+}
+
 const VERSION_PATTERN = /\?v=(\d{4}-\d{2}-\d{2})/;
 
-function picture(name, alt, version) {
+function picture(name, alt, version, width = '100%') {
   return [
     '<picture>',
     `  <source media="(prefers-color-scheme: dark)" srcset="assets/${name}.dark.svg?v=${version}">`,
-    `  <img alt="${escapeXml(alt)}" src="assets/${name}.light.svg?v=${version}" width="100%">`,
+    `  <img alt="${escapeXml(alt)}" src="assets/${name}.light.svg?v=${version}" width="${width}">`,
     '</picture>',
   ].join('\n');
 }
@@ -25,7 +31,9 @@ export function decideVersion({ imagesChanged, readme, today }) {
  */
 export function renderReadme(profile, version, repos) {
   const headerAlt = `${profile.name} — ${profile.headline}`;
-  const repoLinks = repos.map((repo) => `[${repo.name}](${repo.url})`).join(' · ');
+  const cards = repos.map((repo) =>
+    [`<a href="${escapeXml(repo.url)}">`, picture(featuredImage(repo), `${repo.name}: ${repo.description}`, version, '49%'), '</a>'].join('\n'),
+  );
 
   return [
     `<a href="${profile.certification.url}">`,
@@ -34,9 +42,11 @@ export function renderReadme(profile, version, repos) {
     '',
     picture('stack', 'Stack: Adobe Commerce, Frontend, Backend & Data, Cloud & Delivery', version),
     '',
-    picture('featured', 'Featured open-source modules', version),
+    picture('practices', 'How I ship: quality gates and engineering practices', version),
     '',
-    repoLinks,
+    '<p>',
+    cards.join('\n'),
+    '</p>',
     '',
     '## Currently',
     '',

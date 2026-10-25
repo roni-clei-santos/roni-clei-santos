@@ -93,51 +93,110 @@ export function renderStack(profile, themeName) {
   return svg.join('\n');
 }
 
-/**
- * @param {Array<{name: string, description: string, language: string | null}>} repos
- */
-export function renderFeatured(repos, themeName) {
+/** Two-column checklist of the engineering practices behind every delivery. */
+export function renderPractices(profile, themeName) {
   const theme = THEMES[themeName];
-  const gap = 16;
-  const perRow = 2;
-  const cardWidth = (WIDTH - PADDING * 2 - gap * (perRow - 1)) / perRow;
+  const items = profile.practices;
+  const perColumn = Math.ceil(items.length / 2);
+  const gap = 28;
+  const columnWidth = (WIDTH - PADDING * 2 - gap) / 2;
+  const itemSize = 13.5;
+  const lineHeight = 19;
+  const itemGap = 9;
+  const top = 80;
+
+  const columns = [items.slice(0, perColumn), items.slice(perColumn)].map((column) =>
+    column.map((item) => wrapText(item, columnWidth - 26, itemSize)),
+  );
+  const tallest = Math.max(
+    ...columns.map((column) => column.reduce((sum, lines) => sum + lines.length * lineHeight + itemGap, 0)),
+  );
+  const height = top + tallest + 14;
+  const svg = open(WIDTH, height, 'How I ship');
+
+  svg.push(frame(WIDTH, height, theme));
+  svg.push(text(PADDING, 44, 'HOW I SHIP', { size: 12, weight: 700, fill: theme.muted, spacing: 1.5 }));
+
+  columns.forEach((column, index) => {
+    const x = PADDING + index * (columnWidth + gap);
+    let y = top;
+    column.forEach((lines) => {
+      // check mark
+      svg.push(`<circle cx="${x + 8}" cy="${y - 4.5}" r="8" fill="${theme.pillBackground}" stroke="${theme.pillBorder}"/>`);
+      svg.push(
+        `<path d="M${x + 4.2} ${y - 4.6} l2.6 2.6 l5-5" fill="none" stroke="${theme.accent}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>`,
+      );
+      lines.forEach((line, lineIndex) => {
+        svg.push(text(x + 26, y + lineIndex * lineHeight, line, { size: itemSize, fill: theme.text }));
+      });
+      y += lines.length * lineHeight + itemGap;
+    });
+  });
+
+  svg.push('</svg>');
+  return svg.join('\n');
+}
+
+export const CARD_WIDTH = (WIDTH - 16) / 2;
+
+function chip(x, y, label, { fill, stroke, color, size = 12 }) {
+  const width = Math.ceil(textWidth(label, size)) + 22;
+  return {
+    width,
+    markup: [
+      `<rect x="${x}" y="${y}" width="${width}" height="24" rx="12" fill="${fill}" stroke="${stroke}"/>`,
+      text(x + 11, y + 16.5, label, { size, weight: 600, fill: color }),
+    ].join('\n'),
+  };
+}
+
+/**
+ * One featured repository as its own card, so the README can link each card to its repository.
+ *
+ * @param {{name: string, description: string, language: string | null, release?: string | null, highlights?: string[]}} repo
+ */
+export function renderFeaturedCard(repo, themeName) {
+  const theme = THEMES[themeName];
+  const width = CARD_WIDTH;
+  const inner = width - 48;
   const descriptionSize = 13.5;
   const lineHeight = 19;
   const maxLines = 3;
 
-  const cards = repos.map((repo) => {
-    const lines = wrapText(repo.description, cardWidth - 40, descriptionSize);
-    const shown = lines.slice(0, maxLines);
-    if (lines.length > maxLines) shown[maxLines - 1] = truncate(`${shown[maxLines - 1]} ${lines[maxLines]}`, cardWidth - 40, descriptionSize);
-    return { ...repo, lines: shown };
-  });
-  const rows = Math.ceil(cards.length / perRow);
-  const cardHeight = 62 + maxLines * lineHeight + 40;
-  const top = 64;
-  const height = top + rows * cardHeight + (rows - 1) * gap + PADDING - 8;
-  const svg = open(WIDTH, height, 'Featured open-source modules');
+  const lines = wrapText(repo.description, inner, descriptionSize);
+  const shown = lines.slice(0, maxLines);
+  if (lines.length > maxLines) shown[maxLines - 1] = truncate(`${shown[maxLines - 1]} ${lines[maxLines]}`, inner, descriptionSize);
 
-  svg.push(frame(WIDTH, height, theme));
-  svg.push(text(PADDING, 44, 'FEATURED OPEN-SOURCE MODULES', { size: 12, weight: 700, fill: theme.muted, spacing: 1.5 }));
+  const chipsY = 70 + maxLines * lineHeight;
+  const height = chipsY + 24 + 52;
+  const svg = open(width, height, `${repo.name}: ${repo.description}`);
 
-  cards.forEach((card, index) => {
-    const x = PADDING + (index % perRow) * (cardWidth + gap);
-    const y = top + Math.floor(index / perRow) * (cardHeight + gap);
-    svg.push(`<rect x="${x}" y="${y}" width="${cardWidth}" height="${cardHeight}" rx="8" fill="none" stroke="${theme.border}"/>`);
-    // repository icon
-    svg.push(
-      `<path transform="translate(${x + 20} ${y + 20})" fill="${theme.muted}" d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/>`,
-    );
-    svg.push(text(x + 44, y + 33, truncate(card.name, cardWidth - 64, 15), { size: 15, weight: 700, fill: theme.accentText, family: MONO }));
-    card.lines.forEach((line, lineIndex) => {
-      svg.push(text(x + 20, y + 64 + lineIndex * lineHeight, line, { size: descriptionSize, fill: theme.text }));
-    });
-    if (card.language) {
-      const languageY = y + cardHeight - 22;
-      svg.push(`<circle cx="${x + 25}" cy="${languageY - 4.5}" r="5" fill="${LANGUAGE_COLORS[card.language] ?? theme.muted}"/>`);
-      svg.push(text(x + 36, languageY, card.language, { size: 13, fill: theme.muted }));
-    }
+  svg.push(frame(width, height, theme));
+  // repository icon
+  svg.push(
+    `<path transform="translate(24 26)" fill="${theme.muted}" d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/>`,
+  );
+  svg.push(text(48, 39, truncate(repo.name, width - 72, 15), { size: 15, weight: 700, fill: theme.accentText, family: MONO }));
+  shown.forEach((line, lineIndex) => {
+    svg.push(text(24, 68 + lineIndex * lineHeight, line, { size: descriptionSize, fill: theme.text }));
   });
+
+  let x = 24;
+  const chips = [];
+  if (repo.release) chips.push(chip(x, chipsY, repo.release, { fill: theme.pillBackground, stroke: theme.pillBorder, color: theme.accentText }));
+  for (const highlight of repo.highlights ?? []) {
+    x = chips.length ? x + chips[chips.length - 1].width + 8 : x;
+    const next = chip(x, chipsY, highlight, { fill: 'none', stroke: theme.border, color: theme.muted });
+    if (x + next.width > width - 24) break;
+    chips.push(next);
+  }
+  chips.forEach((item) => svg.push(item.markup));
+
+  if (repo.language) {
+    const languageY = height - 22;
+    svg.push(`<circle cx="29" cy="${languageY - 4.5}" r="5" fill="${LANGUAGE_COLORS[repo.language] ?? theme.muted}"/>`);
+    svg.push(text(40, languageY, repo.language, { size: 13, fill: theme.muted }));
+  }
 
   svg.push('</svg>');
   return svg.join('\n');
