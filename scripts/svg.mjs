@@ -153,11 +153,11 @@ function chip(x, y, label, { fill, stroke, color, size = 12 }) {
 /**
  * One featured repository as its own card, so the README can link each card to its repository.
  *
- * @param {{name: string, description: string, language: string | null, release?: string | null, highlights?: string[]}} repo
+ * @param {{name: string, description: string, language: string | null, release?: string | null, highlights?: string[], wide?: boolean}} repo - wide: full README width
  */
 export function renderFeaturedCard(repo, themeName) {
   const theme = THEMES[themeName];
-  const width = CARD_WIDTH;
+  const width = repo.wide ? WIDTH : CARD_WIDTH;
   const inner = width - 48;
   const descriptionSize = 13.5;
   const lineHeight = 19;

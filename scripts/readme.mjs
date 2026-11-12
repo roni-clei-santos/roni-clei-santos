@@ -32,7 +32,7 @@ export function decideVersion({ imagesChanged, readme, today }) {
 export function renderReadme(profile, version, repos) {
   const headerAlt = `${profile.name} — ${profile.headline}`;
   const cards = repos.map((repo) =>
-    [`<a href="${escapeXml(repo.url)}">`, picture(featuredImage(repo), `${repo.name}: ${repo.description}`, version, '49%'), '</a>'].join('\n'),
+    [`<a href="${escapeXml(repo.url)}">`, picture(featuredImage(repo), `${repo.name}: ${repo.description}`, version, repo.wide ? '100%' : '49%'), '</a>'].join('\n'),
   );
 
   return [

@@ -51,13 +51,13 @@ export async function fetchLatestRelease(repo, { fetchImpl = fetch, token } = {}
 /**
  * Fetch every featured repository. A description missing on GitHub falls back to the one in profile.json.
  *
- * @param {Array<{ repo: string, fallbackDescription?: string, highlights?: string[] }>} featured
+ * @param {Array<{ repo: string, fallbackDescription?: string, highlights?: string[], wide?: boolean }>} featured - wide: card on its own full-width row
  */
 export async function fetchFeatured(featured, options = {}) {
   return Promise.all(
-    featured.map(async ({ repo, fallbackDescription = '', highlights = [] }) => {
+    featured.map(async ({ repo, fallbackDescription = '', highlights = [], wide = false }) => {
       const [data, release] = await Promise.all([fetchRepo(repo, options), fetchLatestRelease(repo, options)]);
-      return { ...data, description: data.description || fallbackDescription, release, highlights };
+      return { ...data, description: data.description || fallbackDescription, release, highlights, wide };
     }),
   );
 }

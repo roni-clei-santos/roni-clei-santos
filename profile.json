@@ -62,6 +62,16 @@
   ],
   "featured": [
     {
+      "repo": "roni-clei-santos/ai-company-prospector",
+      "fallbackDescription": "Claude Code agent that builds a list of companies using your tech stack and drafts outreach for you to review. Stop looking for jobs, start looking for companies.",
+      "highlights": [
+        "Open source",
+        "macOS · Linux · Windows",
+        "88 tests"
+      ],
+      "wide": true
+    },
+    {
       "repo": "roni-clei-santos/ProductPaymentOptions",
       "fallbackDescription": "Magento 2 module that shows per-payment-method discounts and installment simulations on the product page.",
       "highlights": [
@@ -87,6 +97,7 @@
     }
   ],
   "currently": [
+    "Building ai-company-prospector, an open-source AI agent that helps people find companies, not just job posts. Try it and tell me if it works in your field.",
     "Maintaining open-source Magento 2 modules, modernized for Magento 2.4.7+ and PHP 8.2–8.3.",
     "Open to remote Adobe Commerce / Magento roles."
   ],

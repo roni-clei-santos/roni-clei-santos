@@ -31,8 +31,10 @@ test('the stack has the four expected columns, none of them empty', () => {
 });
 
 test('the featured modules are repositories of the profile owner', () => {
-  assert.equal(profile.featured.length, 3);
-  for (const { repo, highlights } of profile.featured) {
+  assert.equal(profile.featured.length, 4);
+  assert.equal(profile.featured[0].repo, `${profile.github}/ai-company-prospector`);
+  assert.equal(profile.featured[0].wide, true);
+  for (const { repo, highlights } of profile.featured.slice(1)) {
     assert.match(repo, new RegExp(`^${profile.github}/[\\w.-]+$`));
     assert.deepEqual(highlights, ['100% coverage', 'PHPStan level 9']);
   }
